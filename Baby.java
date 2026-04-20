@@ -21,11 +21,13 @@ public class Baby extends Actor
         {
             resetBaby();
         }
-        /*if(isTouching(Hero.class))
+        
+        if(isTouching(Hero.class))
         {
-            
+            Ambulance weewoo = new Ambulance();
+            getWorld().addObject(weewoo, 300, 200);
+            getWorld().removeObject(this);
         }
-        */
     }
     
     public void resetBaby()
