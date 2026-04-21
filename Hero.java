@@ -8,7 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hero extends Actor
 {
+    public Hero()
+    {
+        GreenfootImage image = new GreenfootImage("man.png");
+        setImage(image);
+    }
+    
     boolean atTop = true;
+    
     public void act()
     {
         if(Greenfoot.mouseClicked(null)) {

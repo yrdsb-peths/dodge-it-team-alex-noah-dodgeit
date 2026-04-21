@@ -12,6 +12,12 @@ public class Baby extends Actor
      * Act - do whatever the Baby wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Baby()
+    {
+        GreenfootImage image = new GreenfootImage("baby2.png");
+        setImage(image);
+    }
+    
     public void act()
     {
         // Add your action code here.
