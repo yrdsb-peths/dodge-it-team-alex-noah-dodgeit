@@ -15,7 +15,9 @@ public class Ambulance extends Actor
     public Ambulance()
     {
         GreenfootImage image = new GreenfootImage("ambulance.png");
+        image.scale(400,400);
         setImage(image);
+        
     }
     public void act()
     {

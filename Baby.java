@@ -32,7 +32,6 @@ public class Baby extends Actor
         {
             Ambulance weewoo = new Ambulance();
             getWorld().addObject(weewoo, 300, 200);
-            //weewooo.scale(200,200);
             getWorld().removeObject(this);
         }
     }
