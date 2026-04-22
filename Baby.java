@@ -21,7 +21,7 @@ public class Baby extends Actor
     public void act()
     {
         // Add your action code here.
-        move(-20);
+        move(-30);
         
         if(getX() <= 0)
         {
