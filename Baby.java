@@ -28,9 +28,11 @@ public class Baby extends Actor
             resetBaby();
         }
         
-        while(!isTouching(Hero.class))
-        {
-        }
+        //while(!isTouching(Hero.class))
+        //{
+            //Counter c = (Counter) getWorld().getObjects(Counter.class).get(0);
+            //c.add(1);
+        //}
         
         if(isTouching(Hero.class))
         {
