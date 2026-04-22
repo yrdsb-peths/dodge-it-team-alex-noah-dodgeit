@@ -24,6 +24,10 @@ public class Hero extends Actor
             getWorld().removeObject(this);
             return;
         }
+        else if(isTouching(Ambulance.class))
+        {
+            return;
+        }
         else
         {
             if (Greenfoot.isKeyDown("up")) {
