@@ -18,17 +18,22 @@ public class Hero extends Actor
     
     public void act()
     {
-        if (Greenfoot.isKeyDown("up")) {
-        setRotation(270);
-        move(20);
-        }
-        if (Greenfoot.isKeyDown("down")) {
-            setRotation(90);
-            move(20);
-        }
+        
         if (isTouching(Baby.class)) {
+            
             getWorld().removeObject(this);
             return;
+        }
+        else
+        {
+            if (Greenfoot.isKeyDown("up")) {
+            setRotation(270);
+            move(20);
+            }
+            if (Greenfoot.isKeyDown("down")) {
+                setRotation(90);
+                move(20);
+            }
         }
     }
 }

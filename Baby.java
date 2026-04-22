@@ -22,7 +22,14 @@ public class Baby extends Actor
     public void act()
     {
          
-        move(-30);
+        if(!isTouching(Hero.class))
+        {
+            move(-30);
+        }
+        else
+        {
+            move(0);
+        }
         
         if(getX() <= 0)
         {
