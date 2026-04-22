@@ -28,6 +28,10 @@ public class Baby extends Actor
             resetBaby();
         }
         
+        while(!isTouching(Hero.class))
+        {
+        }
+        
         if(isTouching(Hero.class))
         {
             Ambulance weewoo = new Ambulance();
