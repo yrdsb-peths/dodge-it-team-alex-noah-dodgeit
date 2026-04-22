@@ -28,17 +28,17 @@ public class Baby extends Actor
             resetBaby();
         }
         
-        //while(!isTouching(Hero.class))
-        //{
-            //Counter c = (Counter) getWorld().getObjects(Counter.class).get(0);
-            //c.add(1);
-        //}
-        
         if(isTouching(Hero.class))
         {
             Ambulance weewoo = new Ambulance();
             getWorld().addObject(weewoo, 300, 200);
             getWorld().removeObject(this);
+        }
+        
+        if(isAtEdge())
+        {
+            Counter c = (Counter) getWorld().getObjects(Counter.class).get(0);
+            c.add(1);
         }
     }
     
