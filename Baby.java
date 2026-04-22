@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Baby extends Actor
 {
+    Counter c;
     /**
      * Act - do whatever the Baby wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,7 +21,7 @@ public class Baby extends Actor
     
     public void act()
     {
-        // Add your action code here.
+         
         move(-30);
         
         if(getX() <= 0)
@@ -28,16 +29,23 @@ public class Baby extends Actor
             resetBaby();
         }
         
+        if(c == null)
+        {
+            c = (Counter) getWorld().getObjects(Counter.class).get(0);
+        }
+        
         if(isTouching(Hero.class))
         {
             Ambulance weewoo = new Ambulance();
             getWorld().addObject(weewoo, 300, 200);
             getWorld().removeObject(this);
+            c.equals(0);
+            return;
         }
         
         if(isAtEdge())
         {
-            Counter c = (Counter) getWorld().getObjects(Counter.class).get(0);
+            
             c.add(1);
         }
     }

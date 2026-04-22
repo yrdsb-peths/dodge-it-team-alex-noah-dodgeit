@@ -26,5 +26,9 @@ public class Hero extends Actor
             setRotation(90);
             move(20);
         }
+        if (isTouching(Baby.class)) {
+            getWorld().removeObject(this);
+            return;
+        }
     }
 }
