@@ -38,6 +38,15 @@ public class Hero extends Actor
                 setRotation(90);
                 move(20);
             }
+            /*if (Greenfoot.isKeyDown("right")) {
+            *setRotation(360);
+            *move(20);
+            *}
+            *if (Greenfoot.isKeyDown("left")) {
+                *setRotation(180);
+                *move(20);
+            }
+            */
         }
     }
 }
