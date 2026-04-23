@@ -1,35 +1,28 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class Counter here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Counter extends Actor
 {
-    /**
-     * Act - do whatever the Counter wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public int score = 0;
+    // Adding 'static' makes this value persist across different worlds/runs
+    public static int highScore = 0; 
+
     public Counter() {
         updateImage();
     }
 
     public void add(int points) {
         score += points;
+        if (score > highScore) {
+            highScore = score;
+        }
         updateImage();
     }
 
+    // You no longer need resetScore() if you are using Option B, 
+    // because the new Counter instance will naturally start at score = 0.
+
     private void updateImage() {
-        setImage(new GreenfootImage("Score: " + score, 24, Color.WHITE, Color.BLACK));
+        String text = "Score: " + score + " | High Score: " + highScore;
+        setImage(new GreenfootImage(text, 24, Color.WHITE, Color.BLACK));
     }
-    
-    public void act()
-    {
-        // Add your action code here.
-        
-    }
-    
 }
