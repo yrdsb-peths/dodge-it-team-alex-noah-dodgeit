@@ -54,11 +54,6 @@ public class Baby extends Actor
             return;
         }
         
-        if(isAtEdge())
-        {
-            
-            c.add(1);
-        }
     }
     
     public void resetBaby()
