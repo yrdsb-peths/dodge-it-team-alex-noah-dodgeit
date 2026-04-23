@@ -11,6 +11,9 @@ public class MyWorld extends World {
         Baby baby = new Baby();
         addObject(baby, 600, 100);
         
+        WhiteBaby white = new WhiteBaby();
+        addObject(white, 600, 300);
+        
         Counter scoreCounter = new Counter();
         addObject(scoreCounter, 50, 20);
     }
