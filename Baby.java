@@ -21,7 +21,10 @@ public class Baby extends Actor
     
     public void act()
     {
-         
+        if (getWorld() == null) 
+        {
+         return;   
+        } 
         if(!isTouching(Hero.class))
         {
             move(-30);
@@ -45,8 +48,9 @@ public class Baby extends Actor
         {
             Ambulance weewoo = new Ambulance();
             getWorld().addObject(weewoo, 300, 200);
-            getWorld().removeObject(this);
             c.equals(0);
+            getWorld().removeObjects(getWorld().getObjects(WhiteBaby.class));
+            getWorld().removeObjects(getWorld().getObjects(Baby.class));
             return;
         }
         
