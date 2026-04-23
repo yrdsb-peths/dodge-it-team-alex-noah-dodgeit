@@ -12,6 +12,8 @@ public class MyWorld extends World {
         Baby baby = new Baby();
         addObject(baby, 600, 100);
         
+        WhiteBaby white = new WhiteBaby();
+        addObject(white, 600, 300);
         
         addObject(gameCounter, 100, 30);
         addObject(new ResetButton(), 500, 30);
@@ -25,6 +27,7 @@ public class MyWorld extends World {
         
         // Remove existing enemies/objects (example)
         removeObjects(getObjects(Baby.class));
+        removeObjects(getObjects(WhiteBaby.class));
         removeObjects(getObjects(Hero.class));
         
         // Reposition player if necessary
