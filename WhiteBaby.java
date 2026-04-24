@@ -62,7 +62,7 @@ public class WhiteBaby extends Actor
     }
     public void resetBaby()
     {
-        int num = Greenfoot.getRandomNumber(4);
+        int num = Greenfoot.getRandomNumber(5);
         if(num == 0)
         {
             setLocation(600,50);
@@ -78,6 +78,10 @@ public class WhiteBaby extends Actor
         else if(num == 3)
         {
             setLocation(600,350);
+        }
+        else if(num == 4)
+        {
+            setLocation(600,0);
         }
         else
         {
